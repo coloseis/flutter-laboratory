@@ -12,7 +12,7 @@ class ButtonsPage extends StatelessWidget {
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.volume_up),
-              tooltip: 'Increase volume by 10',
+              tooltip: 'Icon Button',
               onPressed: () {},
             ),
             RaisedButton(
