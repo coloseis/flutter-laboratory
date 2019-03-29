@@ -7,6 +7,7 @@ import 'widgets/row.dart';
 import 'widgets/column.dart';
 import 'widgets/basic_widgets.dart';
 import 'widgets/buttons.dart';
+import 'widgets/stateful_widget_empty.dart';
 
 void main() => runApp(MyApp());
 
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/column': (context) => ColumnPage(),
         '/basicWidgets': (context) => MyScaffold(),
         '/buttons': (context) => ButtonsPage(),
+        '/statefulWidgetEmpty': (context) => Counter(),
       },
     );
   }
@@ -102,6 +104,12 @@ class MyHomePage extends StatelessWidget {
               child: Text('Buttons'),
               onPressed: () {
                 Navigator.pushNamed(context, '/buttons');
+              },
+            ),
+            RaisedButton(
+              child: Text('Stateful Widget'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/statefulWidgetEmpty');
               },
             ),
           ],
