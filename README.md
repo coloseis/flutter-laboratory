@@ -3,7 +3,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ## How to GitHub
 1. git init
 1. git remote add origin https://github.com/coloseis/flutter-laboratory.git
-1. git pull origin master
 1. git add .
 1. git commit -m 'Initial code commit.'
-1. git push origin master
+1. git push -u origin --all OR git push origin master
