@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'favorite_widget.dart';
 
 class LayoutTutorialPage extends StatelessWidget {
   @override
@@ -33,11 +34,7 @@ class LayoutTutorialPage extends StatelessWidget {
             ),
           ),
           /*3*/
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
+          FavoriteWidget(),
         ],
       ),
     );

@@ -11,6 +11,9 @@ import 'widgets/stateful_widget_empty.dart';
 import 'widgets/callbacks.dart';
 import 'widgets/shoppingList.dart';
 import 'layouts/layout_tutorial.dart';
+import 'state/own.dart';
+import 'state/parent.dart';
+import 'state/mixed.dart';
 
 void main() => runApp(MyApp());
 
@@ -46,6 +49,9 @@ class MyApp extends StatelessWidget {
               ],
             ),
         '/layoutTutorial': (context) => LayoutTutorialPage(),
+        '/stateOwn': (context) => OwnStatePage(),
+        '/stateParent': (context) => ParentWidgetStatePage(),
+        '/stateMixed': (context) => MixedStatePage(),
       },
     );
   }
@@ -156,6 +162,29 @@ class MyHomePage extends StatelessWidget {
             title: Text('Layout Tutorial'),
             onTap: () {
               Navigator.pushNamed(context, '/layoutTutorial');
+            },
+          ),
+          Text(
+            'State',
+            style: Theme.of(context).textTheme.title,
+            textAlign: TextAlign.center,
+          ),
+          ListTile(
+            title: Text('Widget manages own state'),
+            onTap: () {
+              Navigator.pushNamed(context, '/stateOwn');
+            },
+          ),
+          ListTile(
+            title: Text('Parent widget manages widget’s state'),
+            onTap: () {
+              Navigator.pushNamed(context, '/stateParent');
+            },
+          ),
+          ListTile(
+            title: Text('mix-and-match approach'),
+            onTap: () {
+              Navigator.pushNamed(context, '/stateMixed');
             },
           ),
         ],
