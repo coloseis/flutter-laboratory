@@ -96,7 +96,7 @@ class LayoutTutorialPage extends StatelessWidget {
       body: ListView(
         children: [
           Image.asset(
-            'images/lake.jpg',
+            'assets/lake.jpg',
             width: 600,
             height: 240,
             fit: BoxFit.cover,

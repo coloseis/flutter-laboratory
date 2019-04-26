@@ -14,6 +14,12 @@ import 'layouts/layout_tutorial.dart';
 import 'state/own.dart';
 import 'state/parent.dart';
 import 'state/mixed.dart';
+import 'navigation/todo_list.dart';
+import 'navigation/return_data.dart';
+import 'navigation/hero_animation.dart';
+import 'gestures/pointer.dart';
+import 'model/stateCounter.dart';
+import 'model/shopper.dart';
 
 void main() => runApp(MyApp());
 
@@ -52,6 +58,12 @@ class MyApp extends StatelessWidget {
         '/stateOwn': (context) => OwnStatePage(),
         '/stateParent': (context) => ParentWidgetStatePage(),
         '/stateMixed': (context) => MixedStatePage(),
+        '/todoList': (context) => TodoListPage(),
+        '/returnData': (context) => ReturnDataPage(),
+        '/hero': (context) => HeroPage(),
+        '/pointer': (context) => PointerPage(),
+        '/stateCounter': (context) => ScopedModelCounterModelPage(),
+        // '/shopper': (context) => ShopperPage(),
       },
     );
   }
@@ -185,6 +197,57 @@ class MyHomePage extends StatelessWidget {
             title: Text('mix-and-match approach'),
             onTap: () {
               Navigator.pushNamed(context, '/stateMixed');
+            },
+          ),
+          Text(
+            'Navigation',
+            style: Theme.of(context).textTheme.title,
+            textAlign: TextAlign.center,
+          ),
+          ListTile(
+            title: Text('Navigate Todo List Detail'),
+            onTap: () {
+              Navigator.pushNamed(context, '/todoList');
+            },
+          ),
+          ListTile(
+            title: Text('Return Data'),
+            onTap: () {
+              Navigator.pushNamed(context, '/returnData');
+            },
+          ),
+          ListTile(
+            title: Text('Hero Animation'),
+            onTap: () {
+              Navigator.pushNamed(context, '/hero');
+            },
+          ),
+          Text(
+            'Gestures',
+            style: Theme.of(context).textTheme.title,
+            textAlign: TextAlign.center,
+          ),
+          ListTile(
+            title: Text('Pointer'),
+            onTap: () {
+              Navigator.pushNamed(context, '/pointer');
+            },
+          ),
+          Text(
+            'Model / State',
+            style: Theme.of(context).textTheme.title,
+            textAlign: TextAlign.center,
+          ),
+          ListTile(
+            title: Text('Counter'),
+            onTap: () {
+              Navigator.pushNamed(context, '/stateCounter');
+            },
+          ),
+          ListTile(
+            title: Text('Shopping Cart'),
+            onTap: () {
+              Navigator.pushNamed(context, '/shopper');
             },
           ),
         ],
