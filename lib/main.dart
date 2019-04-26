@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
         '/hero': (context) => HeroPage(),
         '/pointer': (context) => PointerPage(),
         '/stateCounter': (context) => ScopedModelCounterModelPage(),
-        // '/shopper': (context) => ShopperPage(),
+        '/shopper': (context) => ShopperPage(),
       },
     );
   }
